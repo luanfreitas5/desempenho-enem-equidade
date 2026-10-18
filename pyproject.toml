@@ -182,8 +182,9 @@ convention = "numpy"  # docstrings no formato NumPy
 "tests/conftest.py" = ["E402", "ARG", "PLR2004"]  # matplotlib.use("Agg") antes dos imports
 # Notebooks: imports após células de código (E402), imports só para efeito
 # colateral (F401), builtins do IPython como `display` (F821) e a semente
-# global do cabeçalho padrão de notebook (NPY002).
-"notebooks/*" = ["E402", "F401", "F821", "NPY002"]
+# global do cabeçalho padrão de notebook (NPY002) e expressões soltas no fim
+# da célula, que o Jupyter renderiza como saída (B018).
+"notebooks/*" = ["E402", "F401", "F821", "NPY002", "B018"]
 "src/main.py" = ["E402"]                # `src/` entra no sys.path antes de importar
 
 [tool.ruff.format]

@@ -5,7 +5,7 @@ from collections.abc import Sequence
 
 import numpy as np
 import polars as pl
-import shap
+import xgboost as xgb
 from xgboost import XGBRegressor
 
 from constants.labels import QUESTION_LABELS
@@ -33,8 +33,11 @@ def compute_shap_values(model: XGBRegressor, X: np.ndarray) -> np.ndarray:  # no
     --------
     >>> values = compute_shap_values(model, X_sample)  # doctest: +SKIP
     """
-    explainer = shap.TreeExplainer(model)
-    values = np.asarray(explainer.shap_values(X))
+    # `pred_contribs` é o TreeSHAP nativo do XGBoost. Evita o parser de `base_score`
+    # do `shap.TreeExplainer`, que quebra em versões antigas do shap (Python 3.10)
+    # com xgboost >= 3.1 (`could not convert string to float: '[7.1E1]'`).
+    contributions = model.get_booster().predict(xgb.DMatrix(X), pred_contribs=True)
+    values = np.asarray(contributions)[:, :-1]  # a última coluna é o viés (base value)
     logger.info("SHAP calculado para %d linhas x %d features", *values.shape)
     return values
 
