@@ -1,0 +1,113 @@
+attribute,group,reference,statistic,gap,ci_low,ci_high,significant,model
+income_group,1 a 3 SM,Mais de 6 SM,mean_score,-89.00985760353683,-90.8009967854563,-87.16732883663492,true,linear_baseline
+income_group,1 a 3 SM,Mais de 6 SM,mean_error,1.0970328362181039,-0.5498294679310162,2.786721866218017,false,linear_baseline
+income_group,1 a 3 SM,Mais de 6 SM,mae,-3.5381183665966915,-4.50886093953256,-2.5316611440244743,true,linear_baseline
+income_group,1 a 3 SM,Mais de 6 SM,rmse,-4.63132446660336,-5.8638470642114795,-3.377503853457812,true,linear_baseline
+income_group,3 a 6 SM,Mais de 6 SM,mean_score,-42.9370593309219,-45.17907117786202,-40.732943128542416,true,linear_baseline
+income_group,3 a 6 SM,Mais de 6 SM,mean_error,2.026689630883069,0.036872759599297186,4.171754264032908,true,linear_baseline
+income_group,3 a 6 SM,Mais de 6 SM,mae,0.3157991460469418,-0.8442086084158754,1.5258752340675907,false,linear_baseline
+income_group,3 a 6 SM,Mais de 6 SM,rmse,-0.44011575052071805,-1.8883814525802998,0.9822111397566081,false,linear_baseline
+income_group,Até 1 SM,Mais de 6 SM,mean_score,-128.93595925875582,-130.71209210014612,-127.16140261379765,true,linear_baseline
+income_group,Até 1 SM,Mais de 6 SM,mean_error,0.9519814342636014,-0.6734668435200726,2.632605510584872,false,linear_baseline
+income_group,Até 1 SM,Mais de 6 SM,mae,-6.426581184703224,-7.4281855565462855,-5.3572722987436485,true,linear_baseline
+income_group,Até 1 SM,Mais de 6 SM,rmse,-7.7307498285860135,-9.043793810789694,-6.438323171207515,true,linear_baseline
+race,Amarela,Branca,mean_score,-33.13504318421917,-37.49411581685832,-28.990931163358137,true,linear_baseline
+race,Amarela,Branca,mean_error,10.939424314905938,7.456739547800318,14.516496090212037,true,linear_baseline
+race,Amarela,Branca,mae,-1.8285741014464136,-3.8466851905771784,0.2531202325557639,false,linear_baseline
+race,Amarela,Branca,rmse,-2.16060908304388,-4.6803198348538775,0.21145883365039378,false,linear_baseline
+race,Indígena,Branca,mean_score,-82.09764513572708,-88.67909040309057,-75.47266609349991,true,linear_baseline
+race,Indígena,Branca,mean_error,34.488877826080376,28.72665105685411,40.12651396317512,true,linear_baseline
+race,Indígena,Branca,mae,-2.5167290989553663,-6.319011498130405,1.1606818096875595,false,linear_baseline
+race,Indígena,Branca,rmse,-3.0377064270229113,-8.127292246160344,1.6881234749246687,false,linear_baseline
+race,Não declarada,Branca,mean_score,-25.35514905750472,-29.80026114859442,-20.30045682801966,true,linear_baseline
+race,Não declarada,Branca,mean_error,1.7230792520484046,-2.2706751193994132,5.3046496934760805,false,linear_baseline
+race,Não declarada,Branca,mae,1.1917144133406197,-1.0032029183810451,3.509312086970397,false,linear_baseline
+race,Não declarada,Branca,rmse,1.2936627633396114,-1.3577430640296893,4.182407280191091,false,linear_baseline
+race,Parda,Branca,mean_score,-45.86933864931859,-46.998466928015596,-44.75640696148239,true,linear_baseline
+race,Parda,Branca,mean_error,11.944168713479014,10.99783796401902,13.002001768148913,true,linear_baseline
+race,Parda,Branca,mae,-3.0827825564911393,-3.6468288779053015,-2.503238282863219,true,linear_baseline
+race,Parda,Branca,rmse,-3.8265658967082885,-4.563674219218583,-3.0925032862181157,true,linear_baseline
+race,Preta,Branca,mean_score,-53.35943149170771,-54.953542617952664,-51.75676202511218,true,linear_baseline
+race,Preta,Branca,mean_error,16.386352647654878,15.077736256344858,17.772876621852486,true,linear_baseline
+race,Preta,Branca,mae,-4.719757202721453,-5.547464333625934,-3.8795302762523405,true,linear_baseline
+race,Preta,Branca,rmse,-5.810884301986718,-6.844064309699206,-4.8119683007997525,true,linear_baseline
+school_type,Não respondeu,Privada,mean_score,-62.22399839603736,-63.85350246985318,-60.61198698598407,true,linear_baseline
+school_type,Não respondeu,Privada,mean_error,0.13280733884593499,-1.3698914637933914,1.7099750680458918,false,linear_baseline
+school_type,Não respondeu,Privada,mae,-1.4566821185557117,-2.444960353875523,-0.5436645652365489,true,linear_baseline
+school_type,Não respondeu,Privada,rmse,-1.3032753523570335,-2.5257221512545955,-0.1551324351896537,true,linear_baseline
+school_type,Pública,Privada,mean_score,-87.3661731367904,-88.9648969705565,-85.72996993854692,true,linear_baseline
+school_type,Pública,Privada,mean_error,15.934802387850855,14.302575110078397,17.45783315763622,true,linear_baseline
+school_type,Pública,Privada,mae,-3.4631906286853607,-4.371341556303609,-2.4814342661223634,true,linear_baseline
+school_type,Pública,Privada,rmse,-4.356529707543942,-5.491142912178836,-3.182324473890942,true,linear_baseline
+region,Centro-Oeste,Sudeste,mean_score,-20.504587003601273,-22.704577988822834,-18.419936275863016,true,linear_baseline
+region,Centro-Oeste,Sudeste,mean_error,13.504894558072287,11.761428597043185,15.215978998013934,true,linear_baseline
+region,Centro-Oeste,Sudeste,mae,2.5056156752051706,1.445860685545773,3.465069458295413,true,linear_baseline
+region,Centro-Oeste,Sudeste,rmse,3.11792533053017,1.7824246878284935,4.312841810253987,true,linear_baseline
+region,Nordeste,Sudeste,mean_score,-31.43799437125847,-32.693614746459914,-30.269399360097644,true,linear_baseline
+region,Nordeste,Sudeste,mean_error,-1.3660503306240699,-2.3339477364065244,-0.22313777811428545,true,linear_baseline
+region,Nordeste,Sudeste,mae,1.594565327945439,0.9463079486004851,2.2077491237829094,true,linear_baseline
+region,Nordeste,Sudeste,rmse,1.7283694343369973,0.94049451447079,2.468518676809002,true,linear_baseline
+region,Norte,Sudeste,mean_score,-48.801101074002645,-50.59997989536708,-47.18857728743606,true,linear_baseline
+region,Norte,Sudeste,mean_error,12.861601333928968,11.461177724395489,14.32747861683288,true,linear_baseline
+region,Norte,Sudeste,mae,-1.9889440472456528,-2.8912855079833495,-1.1088484767684939,true,linear_baseline
+region,Norte,Sudeste,rmse,-2.5321289621748804,-3.6461458994469846,-1.4780065946969705,true,linear_baseline
+region,Sul,Sudeste,mean_score,-8.574974975042323,-10.434083338540091,-6.749111540029486,true,linear_baseline
+region,Sul,Sudeste,mean_error,9.32196179996199,7.855930857966602,10.763281464169802,true,linear_baseline
+region,Sul,Sudeste,mae,-1.5775473079528055,-2.4889257048292266,-0.6299307713656864,true,linear_baseline
+region,Sul,Sudeste,rmse,-2.0236012272783626,-3.137431019348547,-0.8466847390188111,true,linear_baseline
+income_group,1 a 3 SM,Mais de 6 SM,mean_score,-89.00985760353683,-90.8009967854563,-87.16732883663492,true,gradient_boosting
+income_group,1 a 3 SM,Mais de 6 SM,mean_error,1.1480076827542849,-0.4780860390143561,2.8026950497481065,false,gradient_boosting
+income_group,1 a 3 SM,Mais de 6 SM,mae,-3.3684811585578274,-4.348443548854679,-2.3187863408507283,true,gradient_boosting
+income_group,1 a 3 SM,Mais de 6 SM,rmse,-4.454997307049098,-5.678999494864209,-3.1566811920125772,true,gradient_boosting
+income_group,3 a 6 SM,Mais de 6 SM,mean_score,-42.9370593309219,-45.17907117786202,-40.732943128542416,true,gradient_boosting
+income_group,3 a 6 SM,Mais de 6 SM,mean_error,1.9886130307980596,-0.048283060896558934,4.09934514717484,false,gradient_boosting
+income_group,3 a 6 SM,Mais de 6 SM,mae,0.4806949047288711,-0.7017941182023766,1.6652964094809513,false,gradient_boosting
+income_group,3 a 6 SM,Mais de 6 SM,rmse,-0.3317998753398541,-1.7685049399843946,1.1571910429417176,false,gradient_boosting
+income_group,Até 1 SM,Mais de 6 SM,mean_score,-128.93595925875582,-130.71209210014612,-127.16140261379765,true,gradient_boosting
+income_group,Até 1 SM,Mais de 6 SM,mean_error,0.8640589152748734,-0.6828725303761435,2.5982035411208213,false,gradient_boosting
+income_group,Até 1 SM,Mais de 6 SM,mae,-6.390405351064551,-7.380210034261321,-5.337215195532547,true,gradient_boosting
+income_group,Até 1 SM,Mais de 6 SM,rmse,-7.730620252205952,-9.069878980723406,-6.418176369567298,true,gradient_boosting
+race,Amarela,Branca,mean_score,-33.13504318421917,-37.49411581685832,-28.990931163358137,true,gradient_boosting
+race,Amarela,Branca,mean_error,10.553353701624205,7.239681000596561,14.083374935965145,true,gradient_boosting
+race,Amarela,Branca,mae,-2.0075448524875625,-4.051127277113336,0.12462365598776846,false,gradient_boosting
+race,Amarela,Branca,rmse,-2.1927010241166727,-4.699826523905923,0.15545835431266028,false,gradient_boosting
+race,Indígena,Branca,mean_score,-82.09764513572708,-88.67909040309057,-75.47266609349991,true,gradient_boosting
+race,Indígena,Branca,mean_error,32.500655114307385,26.56953329536022,38.079130441305765,true,gradient_boosting
+race,Indígena,Branca,mae,-3.0424285661450696,-6.674035934245296,0.6813967979075173,false,gradient_boosting
+race,Indígena,Branca,rmse,-3.9105403378469106,-8.821339010491657,0.666672719186312,false,gradient_boosting
+race,Não declarada,Branca,mean_score,-25.35514905750472,-29.80026114859442,-20.30045682801966,true,gradient_boosting
+race,Não declarada,Branca,mean_error,1.4288921597340511,-2.5375633313308463,4.954093249682263,false,gradient_boosting
+race,Não declarada,Branca,mae,0.9911350393055827,-1.1540237136105305,3.261987398558608,false,gradient_boosting
+race,Não declarada,Branca,rmse,1.154418053232078,-1.4055925654117936,3.9223691546838526,false,gradient_boosting
+race,Parda,Branca,mean_score,-45.86933864931859,-46.998466928015596,-44.75640696148239,true,gradient_boosting
+race,Parda,Branca,mean_error,11.250042814041969,10.325808541492634,12.294988910689263,true,gradient_boosting
+race,Parda,Branca,mae,-3.050706822389003,-3.5974823603854085,-2.447282940928836,true,gradient_boosting
+race,Parda,Branca,rmse,-3.7870278060491103,-4.519972371342048,-3.074991954908401,true,gradient_boosting
+race,Preta,Branca,mean_score,-53.35943149170771,-54.953542617952664,-51.75676202511218,true,gradient_boosting
+race,Preta,Branca,mean_error,15.679490261805263,14.38443080947417,17.055665212313766,true,gradient_boosting
+race,Preta,Branca,mae,-4.71500802668789,-5.549292611214366,-3.8953430653346244,true,gradient_boosting
+race,Preta,Branca,rmse,-5.8305102218669305,-6.855468114120169,-4.817831734454531,true,gradient_boosting
+school_type,Não respondeu,Privada,mean_score,-62.22399839603736,-63.85350246985318,-60.61198698598407,true,gradient_boosting
+school_type,Não respondeu,Privada,mean_error,-0.15560248760756945,-1.6731153369134322,1.4330684506167455,false,gradient_boosting
+school_type,Não respondeu,Privada,mae,-1.5713547121289224,-2.5140373551824675,-0.6342544605756445,true,gradient_boosting
+school_type,Não respondeu,Privada,rmse,-1.6611314287813883,-2.874959764774246,-0.5298425312034054,true,gradient_boosting
+school_type,Pública,Privada,mean_score,-87.3661731367904,-88.9648969705565,-85.72996993854692,true,gradient_boosting
+school_type,Pública,Privada,mean_error,15.04014014755368,13.438469095811207,16.587802317019708,true,gradient_boosting
+school_type,Pública,Privada,mae,-3.654452800208702,-4.561960657903234,-2.6840536127231633,true,gradient_boosting
+school_type,Pública,Privada,rmse,-4.70946518682824,-5.834691569636774,-3.4476955723380343,true,gradient_boosting
+region,Centro-Oeste,Sudeste,mean_score,-20.504587003601273,-22.704577988822834,-18.419936275863016,true,gradient_boosting
+region,Centro-Oeste,Sudeste,mean_error,13.008567358895302,11.302853531524454,14.666778120217405,true,gradient_boosting
+region,Centro-Oeste,Sudeste,mae,2.236398021724078,1.1864682069359551,3.226698380050787,true,gradient_boosting
+region,Centro-Oeste,Sudeste,rmse,2.7413223330107996,1.3746174455183253,3.949368761398376,true,gradient_boosting
+region,Nordeste,Sudeste,mean_score,-31.43799437125847,-32.693614746459914,-30.269399360097644,true,gradient_boosting
+region,Nordeste,Sudeste,mean_error,-1.2138082424130165,-2.1704806776855334,-0.0932964039186829,true,gradient_boosting
+region,Nordeste,Sudeste,mae,1.5664624044990276,0.9325432147966669,2.1895757623416983,true,gradient_boosting
+region,Nordeste,Sudeste,rmse,1.6635478529342862,0.8792634052162549,2.436746698985421,true,gradient_boosting
+region,Norte,Sudeste,mean_score,-48.801101074002645,-50.59997989536708,-47.18857728743606,true,gradient_boosting
+region,Norte,Sudeste,mean_error,11.707664675925164,10.303746384329614,13.155780184542515,true,gradient_boosting
+region,Norte,Sudeste,mae,-2.062773451284194,-2.9798770080918184,-1.2107941665261028,true,gradient_boosting
+region,Norte,Sudeste,rmse,-2.8133369008614437,-3.9183698763506163,-1.814510607696238,true,gradient_boosting
+region,Sul,Sudeste,mean_score,-8.574974975042323,-10.434083338540091,-6.749111540029486,true,gradient_boosting
+region,Sul,Sudeste,mean_error,9.662021832654306,8.185016344566693,11.189715717718197,true,gradient_boosting
+region,Sul,Sudeste,mae,-1.5174890725429648,-2.4261010726863255,-0.5777300406693944,true,gradient_boosting
+region,Sul,Sudeste,rmse,-1.9865883435339384,-3.0943588313457324,-0.8230664765717064,true,gradient_boosting

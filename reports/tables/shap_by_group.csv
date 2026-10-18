@@ -1,0 +1,426 @@
+attribute,group,n,feature,label,mean_abs_shap,mean_shap
+income_group,1 a 3 SM,8313,Q024,Computador,13.44252,1.4019072
+income_group,1 a 3 SM,8313,Q006,Renda familiar,8.0096655,-1.0741913
+income_group,1 a 3 SM,8313,Q002,Escolaridade da mãe,6.550198,-0.4039343
+income_group,1 a 3 SM,8313,Q013,Freezer,5.240589,0.44273493
+income_group,1 a 3 SM,8313,Q003,Ocupação do pai,4.502688,-0.45029333
+income_group,1 a 3 SM,8313,Q001,Escolaridade do pai,4.4205704,-0.4143313
+income_group,1 a 3 SM,8313,Q005,Pessoas na residência,4.3310575,0.39499983
+income_group,1 a 3 SM,8313,Q008,Banheiros,3.5648277,-0.7845017
+income_group,1 a 3 SM,8313,Q021,TV por assinatura,3.2888203,0.1716088
+income_group,1 a 3 SM,8313,Q014,Máquina de lavar roupa,2.870082,-0.8588065
+income_group,1 a 3 SM,8313,Q022,Celular,2.3283548,0.30925635
+income_group,1 a 3 SM,8313,Q004,Ocupação da mãe,2.2288065,0.07808702
+income_group,1 a 3 SM,8313,Q011,Motocicletas,2.0460536,-0.10907026
+income_group,1 a 3 SM,8313,Q015,Máquina de secar roupa,1.5679832,-0.04849793
+income_group,1 a 3 SM,8313,Q025,Internet,0.81017673,0.2679507
+income_group,1 a 3 SM,8313,Q009,Quartos,0.73242205,-0.1917821
+income_group,1 a 3 SM,8313,Q012,Geladeira,0.58393,0.15705843
+income_group,1 a 3 SM,8313,Q019,TV em cores,0.5670313,0.013195747
+income_group,1 a 3 SM,8313,Q010,Carros,0.5312181,0.30773282
+income_group,1 a 3 SM,8313,Q007,Empregado doméstico,0.49269953,-0.22645491
+income_group,1 a 3 SM,8313,Q023,Telefone fixo,0.46713457,-0.08897154
+income_group,1 a 3 SM,8313,Q018,Aspirador de pó,0.4172943,0.010644683
+income_group,1 a 3 SM,8313,Q016,Micro-ondas,0.39830574,0.100597054
+income_group,1 a 3 SM,8313,Q020,DVD,0.34067333,-0.07021921
+income_group,1 a 3 SM,8313,Q017,Máquina de lavar louça,0.16662571,-0.0574181
+income_group,3 a 6 SM,2740,Q006,Renda familiar,30.048492,30.048492
+income_group,3 a 6 SM,2740,Q024,Computador,13.490341,8.323801
+income_group,3 a 6 SM,2740,Q003,Ocupação do pai,6.7711086,1.7538397
+income_group,3 a 6 SM,2740,Q002,Escolaridade da mãe,6.369703,2.834446
+income_group,3 a 6 SM,2740,Q013,Freezer,5.1166687,1.7413731
+income_group,3 a 6 SM,2740,Q008,Banheiros,5.0556817,1.8614116
+income_group,3 a 6 SM,2740,Q001,Escolaridade do pai,4.9908214,2.0126257
+income_group,3 a 6 SM,2740,Q021,TV por assinatura,4.3456273,-1.27128
+income_group,3 a 6 SM,2740,Q005,Pessoas na residência,3.9436712,0.5210182
+income_group,3 a 6 SM,2740,Q004,Ocupação da mãe,3.110209,1.1623572
+income_group,3 a 6 SM,2740,Q011,Motocicletas,2.7398322,-0.14074539
+income_group,3 a 6 SM,2740,Q014,Máquina de lavar roupa,2.4508667,-1.8210611
+income_group,3 a 6 SM,2740,Q015,Máquina de secar roupa,1.8751249,-0.5595862
+income_group,3 a 6 SM,2740,Q022,Celular,1.7761428,0.2681568
+income_group,3 a 6 SM,2740,Q012,Geladeira,0.94073033,0.012761631
+income_group,3 a 6 SM,2740,Q009,Quartos,0.8209298,-0.44998348
+income_group,3 a 6 SM,2740,Q019,TV em cores,0.7873382,0.18220192
+income_group,3 a 6 SM,2740,Q023,Telefone fixo,0.7470654,0.03811675
+income_group,3 a 6 SM,2740,Q007,Empregado doméstico,0.74358535,-0.560912
+income_group,3 a 6 SM,2740,Q010,Carros,0.70732474,0.2304259
+income_group,3 a 6 SM,2740,Q018,Aspirador de pó,0.58064115,0.29876897
+income_group,3 a 6 SM,2740,Q025,Internet,0.5606332,0.4588883
+income_group,3 a 6 SM,2740,Q016,Micro-ondas,0.47270092,-0.09493766
+income_group,3 a 6 SM,2740,Q020,DVD,0.28920367,-0.18207958
+income_group,3 a 6 SM,2740,Q017,Máquina de lavar louça,0.22421254,-0.1861309
+income_group,Até 1 SM,6968,Q006,Renda familiar,22.856195,-22.856195
+income_group,Até 1 SM,6968,Q024,Computador,14.436093,-8.143371
+income_group,Até 1 SM,6968,Q002,Escolaridade da mãe,6.8859944,-3.1115386
+income_group,Até 1 SM,6968,Q013,Freezer,4.8066993,-1.4902004
+income_group,Até 1 SM,6968,Q005,Pessoas na residência,4.6383796,0.23801236
+income_group,Até 1 SM,6968,Q001,Escolaridade do pai,4.3728914,-2.408506
+income_group,Até 1 SM,6968,Q003,Ocupação do pai,3.9842892,-2.315304
+income_group,Até 1 SM,6968,Q022,Celular,3.8609958,-1.1400764
+income_group,Até 1 SM,6968,Q014,Máquina de lavar roupa,3.5456667,1.2184981
+income_group,Até 1 SM,6968,Q008,Banheiros,2.4285293,-1.8036181
+income_group,Até 1 SM,6968,Q021,TV por assinatura,2.3849592,1.1386648
+income_group,Até 1 SM,6968,Q004,Ocupação da mãe,2.2025485,-1.0435718
+income_group,Até 1 SM,6968,Q025,Internet,1.6602154,-0.5394483
+income_group,Até 1 SM,6968,Q011,Motocicletas,1.4276615,0.11848566
+income_group,Até 1 SM,6968,Q015,Máquina de secar roupa,1.1894423,0.38142818
+income_group,Até 1 SM,6968,Q007,Empregado doméstico,0.9678297,-0.2511299
+income_group,Até 1 SM,6968,Q009,Quartos,0.7414904,0.0562395
+income_group,Até 1 SM,6968,Q019,TV em cores,0.48905098,-0.19886908
+income_group,Até 1 SM,6968,Q012,Geladeira,0.4565265,0.16545844
+income_group,Até 1 SM,6968,Q010,Carros,0.4368433,0.07634051
+income_group,Até 1 SM,6968,Q020,DVD,0.4169427,0.02727234
+income_group,Até 1 SM,6968,Q018,Aspirador de pó,0.37762523,-0.24969512
+income_group,Até 1 SM,6968,Q016,Micro-ondas,0.3576879,0.2070021
+income_group,Até 1 SM,6968,Q023,Telefone fixo,0.23071113,-0.13561565
+income_group,Até 1 SM,6968,Q017,Máquina de lavar louça,0.16229022,-0.006990583
+income_group,Mais de 6 SM,1979,Q006,Renda familiar,53.17003,53.17003
+income_group,Mais de 6 SM,1979,Q024,Computador,17.953295,16.375298
+income_group,Mais de 6 SM,1979,Q002,Escolaridade da mãe,8.275389,5.1405764
+income_group,Mais de 6 SM,1979,Q008,Banheiros,7.521801,6.352976
+income_group,Mais de 6 SM,1979,Q001,Escolaridade do pai,7.48127,4.4894814
+income_group,Mais de 6 SM,1979,Q003,Ocupação do pai,5.553305,3.545618
+income_group,Mais de 6 SM,1979,Q013,Freezer,5.2819543,2.8484569
+income_group,Mais de 6 SM,1979,Q021,TV por assinatura,5.1300015,-3.1707206
+income_group,Mais de 6 SM,1979,Q004,Ocupação da mãe,3.30924,1.474699
+income_group,Mais de 6 SM,1979,Q005,Pessoas na residência,3.0404859,0.38371322
+income_group,Mais de 6 SM,1979,Q011,Motocicletas,2.656983,0.41167015
+income_group,Mais de 6 SM,1979,Q015,Máquina de secar roupa,2.231686,-1.2376248
+income_group,Mais de 6 SM,1979,Q014,Máquina de lavar roupa,2.0167356,-1.7095147
+income_group,Mais de 6 SM,1979,Q022,Celular,1.6424644,-0.24956603
+income_group,Mais de 6 SM,1979,Q012,Geladeira,1.4249804,-0.4288043
+income_group,Mais de 6 SM,1979,Q019,TV em cores,1.268262,-0.23227207
+income_group,Mais de 6 SM,1979,Q007,Empregado doméstico,1.211657,-0.3898612
+income_group,Mais de 6 SM,1979,Q009,Quartos,1.1628265,-0.94230884
+income_group,Mais de 6 SM,1979,Q023,Telefone fixo,1.1236067,0.34275213
+income_group,Mais de 6 SM,1979,Q010,Carros,1.0119852,0.07286204
+income_group,Mais de 6 SM,1979,Q018,Aspirador de pó,0.9182694,0.64768696
+income_group,Mais de 6 SM,1979,Q016,Micro-ondas,0.77371544,-0.31351507
+income_group,Mais de 6 SM,1979,Q025,Internet,0.7021432,0.6325324
+income_group,Mais de 6 SM,1979,Q017,Máquina de lavar louça,0.5600513,-0.5381618
+income_group,Mais de 6 SM,1979,Q020,DVD,0.36442217,-0.16756672
+race,Amarela,341,Q006,Renda familiar,21.05877,1.228122
+race,Amarela,341,Q024,Computador,15.046888,1.5186015
+race,Amarela,341,Q002,Escolaridade da mãe,7.06756,-0.86990607
+race,Amarela,341,Q003,Ocupação do pai,5.2601476,-0.35481086
+race,Amarela,341,Q013,Freezer,4.9871144,0.4700471
+race,Amarela,341,Q001,Escolaridade do pai,4.807447,-0.97327477
+race,Amarela,341,Q005,Pessoas na residência,4.1385193,-0.07126537
+race,Amarela,341,Q008,Banheiros,3.945721,0.493933
+race,Amarela,341,Q021,TV por assinatura,3.5427625,-0.26819065
+race,Amarela,341,Q014,Máquina de lavar roupa,2.9267733,-0.38470003
+race,Amarela,341,Q022,Celular,2.6926844,-0.2882443
+race,Amarela,341,Q004,Ocupação da mãe,2.6618977,-0.14524679
+race,Amarela,341,Q011,Motocicletas,1.9481559,0.12516482
+race,Amarela,341,Q015,Máquina de secar roupa,1.7634023,-0.38113734
+race,Amarela,341,Q025,Internet,1.0456448,0.069255315
+race,Amarela,341,Q007,Empregado doméstico,0.98323375,-0.5445456
+race,Amarela,341,Q009,Quartos,0.88015264,-0.2663021
+race,Amarela,341,Q019,TV em cores,0.7871578,-0.09063615
+race,Amarela,341,Q012,Geladeira,0.6852644,0.072294064
+race,Amarela,341,Q023,Telefone fixo,0.52936614,0.053736545
+race,Amarela,341,Q010,Carros,0.51211846,0.24773301
+race,Amarela,341,Q018,Aspirador de pó,0.46624273,0.0056261877
+race,Amarela,341,Q020,DVD,0.36300915,-0.020955017
+race,Amarela,341,Q016,Micro-ondas,0.34673482,0.18025886
+race,Amarela,341,Q017,Máquina de lavar louça,0.1735104,-0.06822336
+race,Branca,8421,Q006,Renda familiar,23.153122,10.106185
+race,Branca,8421,Q024,Computador,14.637506,4.886547
+race,Branca,8421,Q002,Escolaridade da mãe,6.755972,1.3672347
+race,Branca,8421,Q013,Freezer,5.236007,1.2772745
+race,Branca,8421,Q003,Ocupação do pai,5.2067184,0.5914933
+race,Branca,8421,Q001,Escolaridade do pai,5.1002855,1.0452272
+race,Branca,8421,Q008,Banheiros,4.5133405,1.0479944
+race,Branca,8421,Q005,Pessoas na residência,4.0538836,0.8569583
+race,Branca,8421,Q021,TV por assinatura,3.7158885,-0.6241459
+race,Branca,8421,Q014,Máquina de lavar roupa,2.6804616,-1.0713776
+race,Branca,8421,Q004,Ocupação da mãe,2.6330736,0.38495207
+race,Branca,8421,Q022,Celular,2.4185584,0.011218182
+race,Branca,8421,Q011,Motocicletas,2.168204,0.164892
+race,Branca,8421,Q015,Máquina de secar roupa,1.7155511,-0.34715536
+race,Branca,8421,Q012,Geladeira,0.8277234,0.0039464775
+race,Branca,8421,Q025,Internet,0.8029774,0.32562834
+race,Branca,8421,Q009,Quartos,0.7893238,-0.32307735
+race,Branca,8421,Q019,TV em cores,0.74356174,-0.011205945
+race,Branca,8421,Q007,Empregado doméstico,0.7275312,-0.2842224
+race,Branca,8421,Q010,Carros,0.65058273,0.2312006
+race,Branca,8421,Q023,Telefone fixo,0.63421375,0.030168263
+race,Branca,8421,Q018,Aspirador de pó,0.5739526,0.2130382
+race,Branca,8421,Q016,Micro-ondas,0.46118346,-0.00405572
+race,Branca,8421,Q020,DVD,0.34902462,-0.09732029
+race,Branca,8421,Q017,Máquina de lavar louça,0.25453705,-0.17248505
+race,Não declarada,304,Q006,Renda familiar,21.897171,1.0474598
+race,Não declarada,304,Q024,Computador,14.071871,0.08157176
+race,Não declarada,304,Q002,Escolaridade da mãe,7.2614427,-1.2594001
+race,Não declarada,304,Q001,Escolaridade do pai,5.62651,-0.3946695
+race,Não declarada,304,Q003,Ocupação do pai,5.293014,-0.5454547
+race,Não declarada,304,Q013,Freezer,4.9371157,0.16601622
+race,Não declarada,304,Q005,Pessoas na residência,4.3186264,0.51755804
+race,Não declarada,304,Q008,Banheiros,3.8452008,-0.2309502
+race,Não declarada,304,Q021,TV por assinatura,3.5675623,-0.44957137
+race,Não declarada,304,Q014,Máquina de lavar roupa,3.0613472,-0.37307748
+race,Não declarada,304,Q022,Celular,3.0223217,-0.56344324
+race,Não declarada,304,Q004,Ocupação da mãe,2.785885,-0.4057756
+race,Não declarada,304,Q011,Motocicletas,2.2883132,-0.28437063
+race,Não declarada,304,Q015,Máquina de secar roupa,1.7199036,-0.3166562
+race,Não declarada,304,Q025,Internet,1.0725775,-0.006515188
+race,Não declarada,304,Q009,Quartos,0.8685928,-0.21360204
+race,Não declarada,304,Q007,Empregado doméstico,0.78763545,-0.33044842
+race,Não declarada,304,Q012,Geladeira,0.7198625,0.08274005
+race,Não declarada,304,Q019,TV em cores,0.64965373,-0.09241438
+race,Não declarada,304,Q010,Carros,0.59048957,0.07706668
+race,Não declarada,304,Q018,Aspirador de pó,0.5815734,0.03788995
+race,Não declarada,304,Q016,Micro-ondas,0.51471025,0.009190356
+race,Não declarada,304,Q023,Telefone fixo,0.47640142,-0.05589763
+race,Não declarada,304,Q020,DVD,0.37666485,-0.088530876
+race,Não declarada,304,Q017,Máquina de lavar louça,0.34130597,-0.23496239
+race,Parda,8356,Q006,Renda familiar,18.95911,-5.5083055
+race,Parda,8356,Q024,Computador,13.921066,-2.7608821
+race,Parda,8356,Q002,Escolaridade da mãe,6.782905,-1.4900546
+race,Parda,8356,Q013,Freezer,4.9417744,-0.7031254
+race,Parda,8356,Q001,Escolaridade do pai,4.540762,-1.2060553
+race,Parda,8356,Q003,Ocupação do pai,4.4196353,-1.1019984
+race,Parda,8356,Q005,Pessoas na residência,4.359654,-0.070580885
+race,Parda,8356,Q008,Banheiros,3.2271929,-0.843959
+race,Parda,8356,Q014,Máquina de lavar roupa,3.1952486,0.2330262
+race,Parda,8356,Q021,TV por assinatura,2.9707677,0.47604793
+race,Parda,8356,Q022,Celular,2.91439,-0.4605463
+race,Parda,8356,Q004,Ocupação da mãe,2.331549,-0.30400097
+race,Parda,8356,Q011,Motocicletas,1.886139,-0.17244647
+race,Parda,8356,Q015,Máquina de secar roupa,1.4091325,0.12029818
+race,Parda,8356,Q025,Internet,1.2650284,-0.16528915
+race,Parda,8356,Q009,Quartos,0.798251,-0.14351566
+race,Parda,8356,Q007,Empregado doméstico,0.7561274,-0.27340543
+race,Parda,8356,Q012,Geladeira,0.5574112,0.13656737
+race,Parda,8356,Q019,TV em cores,0.55665535,-0.09494012
+race,Parda,8356,Q010,Carros,0.5199838,0.16301407
+race,Parda,8356,Q016,Micro-ondas,0.4085652,0.12587693
+race,Parda,8356,Q018,Aspirador de pó,0.39885134,-0.12116036
+race,Parda,8356,Q023,Telefone fixo,0.37835008,-0.105551444
+race,Parda,8356,Q020,DVD,0.3679363,-0.034751505
+race,Parda,8356,Q017,Máquina de lavar louça,0.1842615,-0.05938021
+race,Preta,2484,Q006,Renda familiar,17.816635,-7.905311
+race,Preta,2484,Q024,Computador,13.8710985,-3.196516
+race,Preta,2484,Q002,Escolaridade da mãe,6.9940453,-2.0936618
+race,Preta,2484,Q013,Freezer,5.034443,-0.523842
+race,Preta,2484,Q005,Pessoas na residência,4.5971212,0.19585848
+race,Preta,2484,Q001,Escolaridade do pai,4.4440413,-1.5850884
+race,Preta,2484,Q003,Ocupação do pai,4.0572367,-1.3497612
+race,Preta,2484,Q014,Máquina de lavar roupa,3.1234114,0.09693419
+race,Preta,2484,Q008,Banheiros,3.017154,-1.3156388
+race,Preta,2484,Q022,Celular,3.004938,-0.38338628
+race,Preta,2484,Q021,TV por assinatura,2.951363,0.41922504
+race,Preta,2484,Q004,Ocupação da mãe,2.1251647,-0.37287268
+race,Preta,2484,Q011,Motocicletas,1.6886598,0.16939722
+race,Preta,2484,Q015,Máquina de secar roupa,1.371397,0.16091697
+race,Preta,2484,Q025,Internet,1.2388693,-0.14900015
+race,Preta,2484,Q007,Empregado doméstico,0.88491976,-0.39224887
+race,Preta,2484,Q009,Quartos,0.74158543,-0.08237298
+race,Preta,2484,Q019,TV em cores,0.54279655,-0.106651895
+race,Preta,2484,Q012,Geladeira,0.51872355,0.1708238
+race,Preta,2484,Q010,Carros,0.47463247,0.17686808
+race,Preta,2484,Q016,Micro-ondas,0.41410363,0.11849301
+race,Preta,2484,Q018,Aspirador de pó,0.3904554,-0.13502793
+race,Preta,2484,Q020,DVD,0.3865756,-0.032172285
+race,Preta,2484,Q023,Telefone fixo,0.36351845,-0.10752831
+race,Preta,2484,Q017,Máquina de lavar louça,0.15377286,-0.023968028
+school_type,Não respondeu,10287,Q006,Renda familiar,19.697725,-1.3080797
+school_type,Não respondeu,10287,Q024,Computador,14.238075,0.5172993
+school_type,Não respondeu,10287,Q002,Escolaridade da mãe,7.206463,-1.3210998
+school_type,Não respondeu,10287,Q013,Freezer,5.046496,-0.30675206
+school_type,Não respondeu,10287,Q001,Escolaridade do pai,4.8651237,-0.83502865
+school_type,Não respondeu,10287,Q005,Pessoas na residência,4.765926,1.157988
+school_type,Não respondeu,10287,Q003,Ocupação do pai,4.6366816,-0.6723308
+school_type,Não respondeu,10287,Q008,Banheiros,3.4999397,-0.38683924
+school_type,Não respondeu,10287,Q021,TV por assinatura,3.053337,0.39406195
+school_type,Não respondeu,10287,Q014,Máquina de lavar roupa,2.9974167,-0.07330198
+school_type,Não respondeu,10287,Q022,Celular,2.845898,-0.29919678
+school_type,Não respondeu,10287,Q004,Ocupação da mãe,2.324057,-0.1155932
+school_type,Não respondeu,10287,Q011,Motocicletas,1.8330317,0.14113829
+school_type,Não respondeu,10287,Q015,Máquina de secar roupa,1.3766102,0.095278144
+school_type,Não respondeu,10287,Q025,Internet,1.1240177,-0.013041171
+school_type,Não respondeu,10287,Q009,Quartos,0.7563412,-0.15383515
+school_type,Não respondeu,10287,Q007,Empregado doméstico,0.7289461,-0.2520635
+school_type,Não respondeu,10287,Q019,TV em cores,0.61141914,-0.06542356
+school_type,Não respondeu,10287,Q012,Geladeira,0.5987334,0.1320174
+school_type,Não respondeu,10287,Q010,Carros,0.53793174,0.18205342
+school_type,Não respondeu,10287,Q018,Aspirador de pó,0.46887726,-0.018832786
+school_type,Não respondeu,10287,Q023,Telefone fixo,0.4211962,-0.056873605
+school_type,Não respondeu,10287,Q016,Micro-ondas,0.405926,0.13200274
+school_type,Não respondeu,10287,Q020,DVD,0.3590633,-0.034475576
+school_type,Não respondeu,10287,Q017,Máquina de lavar louça,0.18024677,-0.069439866
+school_type,Privada,2201,Q006,Renda familiar,34.83683,31.193272
+school_type,Privada,2201,Q024,Computador,16.165531,12.276305
+school_type,Privada,2201,Q002,Escolaridade da mãe,7.323103,5.3461347
+school_type,Privada,2201,Q008,Banheiros,6.486315,4.2265215
+school_type,Privada,2201,Q001,Escolaridade do pai,6.2614317,4.0811067
+school_type,Privada,2201,Q003,Ocupação do pai,6.15002,3.2153213
+school_type,Privada,2201,Q013,Freezer,5.341591,2.3003209
+school_type,Privada,2201,Q021,TV por assinatura,4.635343,-2.415341
+school_type,Privada,2201,Q005,Pessoas na residência,3.1669772,0.5093682
+school_type,Privada,2201,Q004,Ocupação da mãe,3.1586776,1.328324
+school_type,Privada,2201,Q011,Motocicletas,2.51752,0.41359505
+school_type,Privada,2201,Q014,Máquina de lavar roupa,2.2584233,-1.5924875
+school_type,Privada,2201,Q015,Máquina de secar roupa,1.9349324,-0.7438718
+school_type,Privada,2201,Q022,Celular,1.880181,0.066999726
+school_type,Privada,2201,Q012,Geladeira,1.2025852,-0.24540491
+school_type,Privada,2201,Q019,TV em cores,1.0420552,-0.029088326
+school_type,Privada,2201,Q023,Telefone fixo,0.97294855,0.23574479
+school_type,Privada,2201,Q007,Empregado doméstico,0.94493616,-0.37455055
+school_type,Privada,2201,Q009,Quartos,0.9148877,-0.6174622
+school_type,Privada,2201,Q010,Carros,0.8258385,0.19898781
+school_type,Privada,2201,Q018,Aspirador de pó,0.7234108,0.47430938
+school_type,Privada,2201,Q025,Internet,0.65434206,0.4955536
+school_type,Privada,2201,Q016,Micro-ondas,0.65002865,-0.26164806
+school_type,Privada,2201,Q017,Máquina de lavar louça,0.40748382,-0.36227655
+school_type,Privada,2201,Q020,DVD,0.32724506,-0.13427833
+school_type,Pública,7512,Q006,Renda familiar,17.850864,-4.7704782
+school_type,Pública,7512,Q024,Computador,13.682693,-2.9575026
+school_type,Pública,7512,Q002,Escolaridade da mãe,6.1251726,-0.70237464
+school_type,Pública,7512,Q013,Freezer,5.0400167,0.23931669
+school_type,Pública,7512,Q003,Ocupação do pai,4.45986,-1.0935416
+school_type,Pública,7512,Q001,Escolaridade do pai,4.242537,-0.8280235
+school_type,Pública,7512,Q005,Pessoas na residência,3.8803842,-0.7859801
+school_type,Pública,7512,Q008,Banheiros,3.3299112,-0.89717084
+school_type,Pública,7512,Q021,TV por assinatura,3.2488706,0.11515841
+school_type,Pública,7512,Q014,Máquina de lavar roupa,3.1238663,-0.36774144
+school_type,Pública,7512,Q022,Celular,2.790484,-0.29313046
+school_type,Pública,7512,Q004,Ocupação da mãe,2.407691,-0.30001423
+school_type,Pública,7512,Q011,Motocicletas,2.0400267,-0.26813823
+school_type,Pública,7512,Q015,Máquina de secar roupa,1.658283,-0.14254065
+school_type,Pública,7512,Q025,Internet,1.0950564,0.0028198326
+school_type,Pública,7512,Q009,Quartos,0.80028945,-0.18086442
+school_type,Pública,7512,Q007,Empregado doméstico,0.75831413,-0.3359232
+school_type,Pública,7512,Q012,Geladeira,0.6159311,0.11008766
+school_type,Pública,7512,Q019,TV em cores,0.5598234,-0.066482686
+school_type,Pública,7512,Q010,Carros,0.53905284,0.20699254
+school_type,Pública,7512,Q023,Telefone fixo,0.43758756,-0.11124334
+school_type,Pública,7512,Q018,Aspirador de pó,0.41172835,-0.053409595
+school_type,Pública,7512,Q016,Micro-ondas,0.40247685,0.08200879
+school_type,Pública,7512,Q020,DVD,0.37765527,-0.07641289
+school_type,Pública,7512,Q017,Máquina de lavar louça,0.19803168,-0.078454666
+region,Centro-Oeste,1668,Q006,Renda familiar,21.432852,6.5346284
+region,Centro-Oeste,1668,Q024,Computador,14.264556,2.690566
+region,Centro-Oeste,1668,Q002,Escolaridade da mãe,6.8200135,0.43605313
+region,Centro-Oeste,1668,Q013,Freezer,5.1639876,0.7896898
+region,Centro-Oeste,1668,Q001,Escolaridade do pai,5.10439,0.17974357
+region,Centro-Oeste,1668,Q003,Ocupação do pai,4.8914123,-0.39047757
+region,Centro-Oeste,1668,Q005,Pessoas na residência,4.28672,0.48657528
+region,Centro-Oeste,1668,Q008,Banheiros,4.1681647,0.6856979
+region,Centro-Oeste,1668,Q021,TV por assinatura,3.5100899,-0.17972511
+region,Centro-Oeste,1668,Q014,Máquina de lavar roupa,2.8378718,-1.4199104
+region,Centro-Oeste,1668,Q022,Celular,2.5644767,-0.23118238
+region,Centro-Oeste,1668,Q004,Ocupação da mãe,2.4278705,0.106248304
+region,Centro-Oeste,1668,Q011,Motocicletas,2.2981198,-0.18548867
+region,Centro-Oeste,1668,Q015,Máquina de secar roupa,1.8999704,-0.5112837
+region,Centro-Oeste,1668,Q025,Internet,0.94849586,0.16899861
+region,Centro-Oeste,1668,Q007,Empregado doméstico,0.90087754,-0.4774152
+region,Centro-Oeste,1668,Q009,Quartos,0.86144334,-0.35280058
+region,Centro-Oeste,1668,Q012,Geladeira,0.7211904,0.09470432
+region,Centro-Oeste,1668,Q019,TV em cores,0.7160502,-0.06501344
+region,Centro-Oeste,1668,Q010,Carros,0.6523059,0.21451892
+region,Centro-Oeste,1668,Q023,Telefone fixo,0.55527395,-0.050132062
+region,Centro-Oeste,1668,Q016,Micro-ondas,0.5459271,-0.043418963
+region,Centro-Oeste,1668,Q018,Aspirador de pó,0.4865535,0.0075297197
+region,Centro-Oeste,1668,Q020,DVD,0.34423217,-0.05175284
+region,Centro-Oeste,1668,Q017,Máquina de lavar louça,0.26683265,-0.17066026
+region,Nordeste,7114,Q006,Renda familiar,20.135948,-8.014232
+region,Nordeste,7114,Q024,Computador,14.250607,-3.9693043
+region,Nordeste,7114,Q002,Escolaridade da mãe,6.9054008,-1.490638
+region,Nordeste,7114,Q013,Freezer,4.8514094,-1.3039277
+region,Nordeste,7114,Q001,Escolaridade do pai,4.680846,-1.2150909
+region,Nordeste,7114,Q003,Ocupação do pai,4.560339,-0.9836488
+region,Nordeste,7114,Q005,Pessoas na residência,4.048578,-0.054875966
+region,Nordeste,7114,Q014,Máquina de lavar roupa,3.2708504,1.2740072
+region,Nordeste,7114,Q008,Banheiros,3.1910126,-0.5159343
+region,Nordeste,7114,Q022,Celular,2.9676948,-0.49430814
+region,Nordeste,7114,Q021,TV por assinatura,2.796591,0.71062016
+region,Nordeste,7114,Q004,Ocupação da mãe,2.4257083,-0.43714762
+region,Nordeste,7114,Q011,Motocicletas,1.8132745,-0.22895579
+region,Nordeste,7114,Q025,Internet,1.2229848,-0.066911876
+region,Nordeste,7114,Q015,Máquina de secar roupa,1.1731666,0.4234579
+region,Nordeste,7114,Q009,Quartos,0.81630147,-0.13693573
+region,Nordeste,7114,Q007,Empregado doméstico,0.7572459,-0.18757164
+region,Nordeste,7114,Q019,TV em cores,0.5309421,-0.12053844
+region,Nordeste,7114,Q010,Carros,0.51652646,0.12727119
+region,Nordeste,7114,Q012,Geladeira,0.4931138,0.19335833
+region,Nordeste,7114,Q018,Aspirador de pó,0.35981688,-0.16930057
+region,Nordeste,7114,Q016,Micro-ondas,0.35437018,0.19317172
+region,Nordeste,7114,Q020,DVD,0.34949338,-0.00944464
+region,Nordeste,7114,Q023,Telefone fixo,0.31137353,-0.13783425
+region,Nordeste,7114,Q017,Máquina de lavar louça,0.17239839,-0.03707592
+region,Norte,2148,Q006,Renda familiar,19.845896,-7.810998
+region,Norte,2148,Q024,Computador,13.8345,-5.0055985
+region,Norte,2148,Q002,Escolaridade da mãe,6.8871627,-1.0056443
+region,Norte,2148,Q005,Pessoas na residência,5.015949,-1.3634357
+region,Norte,2148,Q013,Freezer,4.8296995,-1.4095403
+region,Norte,2148,Q001,Escolaridade do pai,4.683678,-1.0622247
+region,Norte,2148,Q003,Ocupação do pai,4.4877276,-1.154445
+region,Norte,2148,Q014,Máquina de lavar roupa,3.3274152,-0.0040889108
+region,Norte,2148,Q008,Banheiros,3.1336591,-0.91517127
+region,Norte,2148,Q022,Celular,3.0674798,-0.81993645
+region,Norte,2148,Q021,TV por assinatura,2.8927727,0.5130591
+region,Norte,2148,Q004,Ocupação da mãe,2.4619539,-0.25426182
+region,Norte,2148,Q011,Motocicletas,1.9728822,-0.34855866
+region,Norte,2148,Q025,Internet,1.7218652,-0.7046024
+region,Norte,2148,Q015,Máquina de secar roupa,1.657586,-0.19257718
+region,Norte,2148,Q009,Quartos,0.89428085,-0.130633
+region,Norte,2148,Q007,Empregado doméstico,0.88065875,-0.38886744
+region,Norte,2148,Q012,Geladeira,0.615804,0.03527571
+region,Norte,2148,Q019,TV em cores,0.58418214,-0.15865974
+region,Norte,2148,Q010,Carros,0.47183946,0.09737034
+region,Norte,2148,Q016,Micro-ondas,0.39310646,0.26417604
+region,Norte,2148,Q018,Aspirador de pó,0.38518307,-0.2208198
+region,Norte,2148,Q020,DVD,0.35770327,0.01851025
+region,Norte,2148,Q023,Telefone fixo,0.33161286,-0.1690845
+region,Norte,2148,Q017,Máquina de lavar louça,0.17670567,-0.041534673
+region,Sudeste,6898,Q006,Renda familiar,21.16569,8.433441
+region,Sudeste,6898,Q024,Computador,14.3720045,4.936527
+region,Sudeste,6898,Q002,Escolaridade da mãe,6.7071967,0.6579815
+region,Sudeste,6898,Q013,Freezer,5.294692,1.4801321
+region,Sudeste,6898,Q003,Ocupação do pai,4.8649344,0.30973357
+region,Sudeste,6898,Q001,Escolaridade do pai,4.8534226,0.5802469
+region,Sudeste,6898,Q008,Banheiros,4.2877517,0.40548488
+region,Sudeste,6898,Q005,Pessoas na residência,4.182926,0.8867493
+region,Sudeste,6898,Q021,TV por assinatura,3.761606,-0.76671034
+region,Sudeste,6898,Q014,Máquina de lavar roupa,2.640941,-1.3683721
+region,Sudeste,6898,Q004,Ocupação da mãe,2.4588654,0.3316072
+region,Sudeste,6898,Q022,Celular,2.4196122,0.034080017
+region,Sudeste,6898,Q011,Motocicletas,2.009371,0.3775384
+region,Sudeste,6898,Q015,Máquina de secar roupa,1.5809537,-0.17403907
+region,Sudeste,6898,Q025,Internet,0.8161662,0.27388817
+region,Sudeste,6898,Q012,Geladeira,0.80751944,0.01432402
+region,Sudeste,6898,Q007,Empregado doméstico,0.744081,-0.34552994
+region,Sudeste,6898,Q019,TV em cores,0.72027034,-0.0007703106
+region,Sudeste,6898,Q009,Quartos,0.7052327,-0.22497068
+region,Sudeste,6898,Q023,Telefone fixo,0.6604628,0.08278748
+region,Sudeste,6898,Q010,Carros,0.6001822,0.2780965
+region,Sudeste,6898,Q018,Aspirador de pó,0.54545283,0.19414662
+region,Sudeste,6898,Q016,Micro-ondas,0.46816573,-0.024798201
+region,Sudeste,6898,Q020,DVD,0.38576478,-0.13090459
+region,Sudeste,6898,Q017,Máquina de lavar louça,0.2274319,-0.14441751
+region,Sul,2172,Q006,Renda familiar,21.07518,11.087472
+region,Sul,2172,Q024,Computador,14.182689,4.868509
+region,Sul,2172,Q002,Escolaridade da mãe,6.7691827,0.18365099
+region,Sul,2172,Q013,Freezer,5.29806,2.0634825
+region,Sul,2172,Q003,Ocupação do pai,5.0354996,-0.0284635
+region,Sul,2172,Q001,Escolaridade do pai,4.7632155,0.36645392
+region,Sul,2172,Q005,Pessoas na residência,4.404773,1.6204858
+region,Sul,2172,Q008,Banheiros,4.2970595,0.12844113
+region,Sul,2172,Q021,TV por assinatura,3.7323236,-0.44485742
+region,Sul,2172,Q014,Máquina de lavar roupa,2.718553,-1.9653095
+region,Sul,2172,Q022,Celular,2.6275275,0.13622862
+region,Sul,2172,Q004,Ocupação da mãe,2.481911,0.30948344
+region,Sul,2172,Q015,Máquina de secar roupa,2.2541687,-1.0466763
+region,Sul,2172,Q011,Motocicletas,2.2517552,0.19824629
+region,Sul,2172,Q012,Geladeira,0.8420606,-0.029092155
+region,Sul,2172,Q009,Quartos,0.8177898,-0.41671836
+region,Sul,2172,Q025,Internet,0.7450131,0.36651343
+region,Sul,2172,Q019,TV em cores,0.7338344,0.03481268
+region,Sul,2172,Q018,Aspirador de pó,0.71236724,0.3572524
+region,Sul,2172,Q010,Carros,0.6834923,0.21869242
+region,Sul,2172,Q007,Empregado doméstico,0.6265573,-0.27226523
+region,Sul,2172,Q023,Telefone fixo,0.6224557,-0.020969182
+region,Sul,2172,Q016,Micro-ondas,0.51771456,-0.1381762
+region,Sul,2172,Q020,DVD,0.3503977,-0.09552377
+region,Sul,2172,Q017,Máquina de lavar louça,0.28488663,-0.21511091

@@ -1,0 +1,20 @@
+{
+  "gold_sha256": "9dedd4ecbd0e764a211f896bfa24352b1fd49e5c3eaaa4e959fb01925627cf4d",
+  "n_train": 400000,
+  "n_test": 100000,
+  "random_seed": 42,
+  "comparison": {
+    "metric": "rmse (linear - gradient_boosting)",
+    "cv_mean_difference": 0.5059956078153277,
+    "cv_corrected_ttest": {
+      "statistic": 30.794086010750974,
+      "p_value": 6.6257479144063995e-06,
+      "degrees_of_freedom": 4
+    },
+    "test_difference": 0.6070940390717112,
+    "test_difference_ci": [
+      0.5455115347756294,
+      0.6587438298146975
+    ]
+  }
+}
