@@ -1,0 +1,4 @@
+# Configuração do logger (console com rich + arquivo diário em logs/).
+logging:
+  level: INFO
+  backup_count: 30

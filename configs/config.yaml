@@ -1,0 +1,36 @@
+# Configurações gerais do projeto (validadas por src/config/settings.py).
+version: "0.1.0"
+
+project:
+  name: desempenho-enem-equidade
+  random_seed: 42
+
+ingestion:
+  # Anos dos microdados do ENEM (INEP). Cada ano tem ~1,5 GB descompactado.
+  years: [2022, 2023]
+  base_url: "https://download.inep.gov.br/microdados/microdados_enem_{year}.zip"
+  separator: ";"
+  # O CSV do INEP é latin-1, mas pl.scan_csv (lazy) só aceita UTF-8. As colunas
+  # usadas são ASCII, então "utf8-lossy" é seguro (ver README, seção Dados).
+  encoding: utf8-lossy
+  keep_zip: false
+  timeout_seconds: 120
+
+preparation:
+  # Treineiros (IN_TREINEIRO = 1) não estão concluindo o ensino médio e têm perfil distinto.
+  exclude_trainees: true
+
+explainability:
+  sample_size: 20000
+  top_features: 15
+
+fairness:
+  n_bootstrap: 1000
+  confidence_level: 0.95
+  min_group_size: 100
+  # Grupo de referência de cada atributo (as diferenças são "grupo - referência").
+  reference_groups:
+    income_group: "Mais de 6 SM"
+    race: "Branca"
+    school_type: "Privada"
+    region: "Sudeste"

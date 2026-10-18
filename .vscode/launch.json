@@ -1,0 +1,64 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Pipeline: ingest",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/main.py",
+      "args": ["ingest", "--years", "2023"],
+      "env": { "PYTHONHASHSEED": "42" },
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Pipeline: prepare",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/main.py",
+      "args": ["prepare"],
+      "env": { "PYTHONHASHSEED": "42" },
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Pipeline: train",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/main.py",
+      "args": ["train"],
+      "env": { "PYTHONHASHSEED": "42" },
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Pipeline: explain",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/main.py",
+      "args": ["explain"],
+      "env": { "PYTHONHASHSEED": "42" },
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Pipeline: fairness",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/main.py",
+      "args": ["fairness"],
+      "env": { "PYTHONHASHSEED": "42" },
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Pytest: arquivo atual",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["${file}", "--no-cov", "-x"],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    }
+  ]
+}

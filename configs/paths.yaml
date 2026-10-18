@@ -1,0 +1,9 @@
+# Caminhos relativos à raiz do projeto (dados e modelos ficam fora do Git).
+paths:
+  raw_dir: data/bronze/raw      # ZIP/CSV do INEP exatamente como recebidos + manifest
+  silver_dir: data/silver/enem  # Parquet tipado, particionado por ano (ano=YYYY)
+  gold_dir: data/gold           # tabela analítica e predições
+  models_dir: models
+  figures_dir: reports/figures
+  tables_dir: reports/tables
+  logs_dir: logs
