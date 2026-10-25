@@ -296,7 +296,7 @@ mergedeep==1.3.4
     # via
     #   mkdocs
     #   mkdocs-get-deps
-mistune==3.3.4
+mistune==3.4.0
     # via nbconvert
 mkdocs==1.6.1
     # via
