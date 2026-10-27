@@ -1,6 +1,6 @@
 # =============================================================================
-# pyproject.toml — fonte única de verdade para dependências e configuração de
-# ferramentas. Alinhado ao CLAUDE.md (Data Science Projects).
+# pyproject.toml — fonte única de verdade para dependências, grupos e configuração
+# de ferramentas (formato do template scaffolding-ds-projects).
 # Gerenciador: uv. O lock file (uv.lock) DEVE ser commitado (`uv lock`).
 # =============================================================================
 
@@ -69,41 +69,39 @@ required-environments = [
 ]
 # numba < 0.57.1 (puxado pelo shap) tem CVE-2024-28292.
 constraint-dependencies = ["numba>=0.57.1"]
+default-groups = ["dev", "quality", "docs"]
 
-# --- Dependências de desenvolvimento (não publicadas; PEP 735) --------------
+# --- Grupos de dependências (PEP 735) ----------------------------------------
+# `dev` é o padrão; `quality` e `docs` entram em `default-groups` para que
+# `uv sync --dev` (CI) e `make install` instalem tudo com um comando.
 [dependency-groups]
 dev = [
-    # Lint + format
-    "ruff>=0.5",                    # linter e formatador (substitui flake8/isort/black)
-    # Type checking (roda no CI, não no pre-commit)
-    "basedpyright>=1.13",           # type checker estático (substitui mypy)
-    # Segurança (roda no CI)
-    "bandit>=1.7",                  # análise de segurança do código
-    "pip-audit>=2.7",               # auditoria de vulnerabilidades das dependências
+    "ruff>=0.5",                    # lint + format (substitui flake8/isort/black)
+    "basedpyright>=1.13",           # type checking estático (CI, não pre-commit)
+    "pytest>=8.2",
+    "pytest-cov>=5.0",
+    "hypothesis>=6.165.0",          # testes baseados em propriedades
+    "pre-commit>=3.7",
+    "commitizen>=4.16.5",           # Conventional Commits + CHANGELOG
     "detect-secrets>=1.5",          # impede commit de credenciais
-    # Qualidade / complexidade / docstrings
+    "nbstripout>=0.7",              # remove outputs de notebooks
+    "nbqa>=1.8",                    # aplica linters a notebooks
+    "ipykernel>=7.3.0",             # kernel Jupyter (VS Code / Data Wrangler)
+    "jupyterlab>=4.6.3",
+    "scalene>=1.5",                 # profiling sob demanda
+]
+quality = [
+    "bandit>=1.7",                  # análise de segurança do código
+    "pip-audit>=2.7",               # vulnerabilidades das dependências
     "vulture>=2.11",                # código morto
     "refurb>=2.0",                  # modernização de código
     "xenon>=0.9",                   # limites de complexidade
     "radon>=6.0",                   # métricas de complexidade
     "interrogate>=1.7",             # cobertura de docstrings
-    # Testes
-    "pytest>=8.2",
-    "pytest-cov>=5.0",
-    "hypothesis>=6.165.0",          # testes baseados em propriedades
-    # Notebooks
-    "nbqa>=1.8",                    # aplica linters a notebooks
-    "nbstripout>=0.7",              # remove outputs de notebooks
-    "ipykernel>=7.3.0",             # kernel Jupyter (VS Code / Data Wrangler)
-    "jupyterlab>=4.6.3",
-    # Workflow
-    "pre-commit>=3.7",
-    "commitizen>=4.16.5",           # Conventional Commits + CHANGELOG
-    # Documentação
+]
+docs = [
     "mkdocs-material>=9.7.7",
     "mkdocstrings[python]>=1.0.6",
-    # Profiling (use sob demanda)
-    "scalene>=1.5",
 ]
 
 [project.urls]
@@ -135,6 +133,8 @@ select = [
     "ARG",    # flake8-unused-arguments
     "PTH",    # flake8-use-pathlib (usar Path em vez de os.path)
     "PD",     # pandas-vet — antipadrões específicos de pandas
+    "S",      # flake8-bandit (segurança)
+    "D",      # pydocstyle (docstrings NumPy, convenção abaixo)
     "NPY",    # NumPy-specific rules
     "PERF",   # perflint — antipadrões de performance
     "RUF",    # regras específicas do próprio Ruff
@@ -142,6 +142,11 @@ select = [
     "TRY",    # tryceratops — boas práticas de exception handling
 ]
 ignore = [
+    "D203",    # conflita com D211 (convenção numpy)
+    "D213",    # conflita com D212 (convenção numpy)
+    "D401",    # heurística de modo imperativo só vale para inglês; docstrings são pt-BR
+    "S101",    # assert usado só para estreitar tipos, após validação real (idem bandit B101)
+    "S310",    # urlopen: esquema HTTPS é validado antes (idem bandit B310 com nosec)
     "PLR0913", # muitos argumentos em função — comum em pipelines de ML
     "PLR2004", # "magic value" em comparação — comum em thresholds de modelo
     "TRY003",  # mensagem longa em exceção customizada
@@ -178,13 +183,13 @@ known-first-party = [
 convention = "numpy"  # docstrings no formato NumPy
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*" = ["ARG", "PLR2004", "S101", "N806"]  # fixtures, valores fixos, asserts e `X` (convenção sklearn)
-"tests/conftest.py" = ["E402", "ARG", "PLR2004"]  # matplotlib.use("Agg") antes dos imports
+"tests/*" = ["ARG", "PLR2004", "S101", "N806", "D"]  # fixtures, valores fixos, asserts e `X` (convenção sklearn)
+"tests/conftest.py" = ["E402", "ARG", "PLR2004", "D"]  # matplotlib.use("Agg") antes dos imports
 # Notebooks: imports após células de código (E402), imports só para efeito
 # colateral (F401), builtins do IPython como `display` (F821) e a semente
 # global do cabeçalho padrão de notebook (NPY002) e expressões soltas no fim
 # da célula, que o Jupyter renderiza como saída (B018).
-"notebooks/*" = ["E402", "F401", "F821", "NPY002", "B018"]
+"notebooks/*" = ["E402", "F401", "F821", "NPY002", "B018", "D"]
 "src/main.py" = ["E402"]                # `src/` entra no sys.path antes de importar
 
 [tool.ruff.format]
@@ -243,6 +248,7 @@ ignore = [
 testpaths = ["tests"]
 pythonpath = ["src"]
 addopts = [
+    "-ra",
     "--strict-markers",
     "--cov=src",
     "--cov-report=term-missing",

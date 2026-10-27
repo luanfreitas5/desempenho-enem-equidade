@@ -70,11 +70,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     """
     args = build_parser().parse_args(argv)
     settings = load_settings(args.config_dir)
-    configure_logging(
-        args.log_level or settings.logging.level,
-        settings.paths.resolved("logs_dir"),
-        settings.logging.backup_count,
-    )
+    configure_logging(args.log_level)
     seed_everything(settings.project.random_seed)
     apply_theme()
     try:

@@ -14,7 +14,6 @@ CONFIG_FILES: tuple[str, ...] = (
     "config.yaml",
     "paths.yaml",
     "model_params.yaml",
-    "logging.yaml",
 )
 
 
@@ -125,13 +124,6 @@ class PathsSettings(_FrozenModel):
         return resolve_path(getattr(self, name))
 
 
-class LoggingSettings(_FrozenModel):
-    """Configuração do logger."""
-
-    level: str = "INFO"
-    backup_count: int = Field(default=30, ge=1)
-
-
 class Settings(BaseSettings):
     """Configuração global do projeto, validada na inicialização.
 
@@ -151,7 +143,6 @@ class Settings(BaseSettings):
     explainability: ExplainabilitySettings = ExplainabilitySettings()
     fairness: FairnessSettings
     paths: PathsSettings
-    logging: LoggingSettings = LoggingSettings()
 
 
 def read_yaml(path: Path) -> dict[str, Any]:

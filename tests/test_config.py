@@ -7,6 +7,7 @@ from pathlib import Path
 import numpy as np
 import polars as pl
 import pytest
+import yaml
 
 from config.environment import seed_everything
 from config.logging import configure_logging
@@ -72,14 +73,21 @@ def test_resolve_path_relative_and_absolute(tmp_path: Path):
 
 
 def test_configure_logging_creates_daily_file(tmp_path: Path, restore_logging: None):
-    """O logging grava em logs/log_YYYY-MM-DD.log e rejeita níveis inválidos."""
-    configure_logging("INFO", tmp_path / "logs")
+    """O logging grava no arquivo ativo, sem duplicar handlers, e rejeita níveis inválidos."""
+    config = yaml.safe_load((CONFIG_DIR / "logging.yaml").read_text(encoding="utf-8"))
+    config["handlers"]["file"]["filename"] = str(tmp_path / "logs" / "log.log")
+    config_path = tmp_path / "logging.yaml"
+    config_path.write_text(yaml.safe_dump(config), encoding="utf-8")
+    configure_logging("INFO", config_path)
+    configure_logging("INFO", config_path)
+    assert len(logging.getLogger().handlers) == 2
     logging.getLogger("teste").info("mensagem de teste")
     logging.shutdown()
-    files = list((tmp_path / "logs").glob("log_*.log"))
-    assert len(files) == 1
-    with pytest.raises(ValueError, match="inválido"):
-        configure_logging("NIVEL_FALSO")
+    assert "mensagem de teste" in (tmp_path / "logs" / "log.log").read_text(encoding="utf-8")
+    with pytest.raises(ConfigurationError, match="inválido"):
+        configure_logging("NIVEL_FALSO", config_path)
+    with pytest.raises(ConfigurationError, match="não encontrado"):
+        configure_logging(config_path=tmp_path / "ausente.yaml")
 
 
 def test_seed_everything_is_deterministic():

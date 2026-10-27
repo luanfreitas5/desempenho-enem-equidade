@@ -1,4 +1,4 @@
-"""Barra de progresso padronizada (``rich.progress``)."""
+"""Barra de progresso padronizada (``rich.progress``), no console compartilhado do logging."""
 
 from rich.progress import (
     BarColumn,
@@ -10,6 +10,8 @@ from rich.progress import (
     TimeElapsedColumn,
     TimeRemainingColumn,
 )
+
+from config.logging import CONSOLE
 
 
 def create_progress() -> Progress:
@@ -35,4 +37,5 @@ def create_progress() -> Progress:
         TaskProgressColumn(),
         TimeElapsedColumn(),
         TimeRemainingColumn(),
+        console=CONSOLE,
     )

@@ -1,4 +1,4 @@
-# --- Configuração ----------------------------------------------------------
+# Atalhos reprodutíveis. `make check` replica o CI localmente.
 # 'src' vira a raiz do path ao rodar o script.
 RUN := uv run python src/main.py
 
@@ -7,36 +7,32 @@ RUN := uv run python src/main.py
 export PYTHONHASHSEED := 42
 
 .DEFAULT_GOAL := help
-.PHONY: help init venv install update lock export \
-	lint typecheck security deadcode complexity docstrings modernize quality check \
-	test smoke test-all coverage hooks pre-commit update-hooks release \
-	ingest prepare train explain fairness pipeline \
-	docs docs-serve docs-deploy profile clean cache jupyter add remove tree
+.PHONY: help install lock export update hooks pre-commit 	lint format typecheck security quality check 	test smoke test-all coverage 	ingest prepare train explain fairness pipeline reproduce 	docs docs-serve docs-deploy release profile clean
 
 help:  ## Lista os alvos disponíveis
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
 		awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
 
 # --- Ambiente --------------------------------------------------------------
-init:  ## Inicializa o projeto (instala dependências + hooks)
-	$(MAKE) install
-	$(MAKE) hooks
-
-venv:  ## Cria o ambiente virtual (requer: uv)
-	uv venv
-
-install:  ## Instala dependências (runtime + dev)
-	uv sync --dev
-
-update:  ## Atualiza todas as dependências e sincroniza
-	uv lock --upgrade
-	uv sync --all-groups
+install:  ## Instala todas as dependências do uv.lock e os hooks do pre-commit
+	uv sync --locked --all-groups
+	uv run pre-commit install --hook-type pre-commit --hook-type commit-msg
 
 lock:  ## Gera/atualiza o uv.lock (commitar)
 	uv lock
 
 export:  ## Exporta requirements.txt para quem usa pip
 	uv export --no-hashes -o requirements.txt
+
+update:  ## Atualiza todas as dependências e sincroniza
+	uv lock --upgrade
+	uv sync --all-groups
+
+hooks:  ## Gera o baseline do detect-secrets (hooks já instalados por `make install`)
+	uv run detect-secrets scan > .secrets.baseline
+
+pre-commit:  ## Roda todos os hooks do pre-commit em todos os arquivos
+	uv run pre-commit run --all-files
 
 # --- Pipeline --------------------------------------------------------------
 ingest:  ## Etapa 1: baixa os microdados (com cache) e grava o Parquet silver por ano
@@ -57,39 +53,37 @@ fairness:  ## Etapa 5: análise de equidade com intervalos de confiança
 pipeline:  ## Executa todas as etapas, da ingestão à equidade
 	$(RUN) all
 
-# --- Qualidade -------------------------------------------------------------
-lint: ## Lint com ruff (Format + Check)
-	uv run ruff format .
-	uv run ruff check --fix .
+reproduce: pipeline  ## Reproduz todos os resultados (sem DVC: o pipeline é idempotente)
 
-typecheck:  ## Type checking estático (basedPyright)
+# --- Qualidade -------------------------------------------------------------
+lint:  ## Verifica lint e formatação (ruff), sem alterar arquivos
+	uv run ruff check src tests
+	uv run ruff format --check src tests
+
+format:  ## Corrige lint e formata o código (ruff)
+	uv run ruff check --fix src tests
+	uv run ruff format src tests
+
+typecheck:  ## Type checking estático (basedpyright)
 	uv run basedpyright
 
-security:  ## Análise de segurança (bandit + pip-audit)
-	uv run bandit -r src -c pyproject.toml
+security:  ## Segurança do código e das dependências (bandit + pip-audit)
+	uv run bandit -c pyproject.toml -r src
 	uv run pip-audit
 
-deadcode:  ## Detecta código morto (vulture)
-	uv run vulture src
-
-complexity:  ## Limites de complexidade (xenon)
-	uv run xenon --max-absolute B --max-modules A --max-average A src
-
-docstrings:  ## Cobertura de docstrings (interrogate)
-	uv run interrogate -v src
-
-modernize:  ## Detecta código redundante (refurb)
+quality:  ## Código morto, modernização, complexidade e docstrings
+	uv run vulture
 	uv run refurb src
+	uv run xenon --max-absolute B --max-modules A --max-average A src
+	uv run interrogate src
 
-quality: lint typecheck security deadcode complexity docstrings modernize   ## Roda toda a suíte de qualidade (espelha o CI)
-
-check: quality test  ## Roda localmente tudo o que o CI roda (qualidade + testes)
+check: lint typecheck security quality test  ## Roda localmente tudo o que o CI roda
 
 # --- Testes ----------------------------------------------------------------
-test:  ## Roda os testes com cobertura
-	uv run pytest -m "not slow"
+test:  ## Roda os testes com cobertura (sem os lentos)
+	uv run pytest -m "not slow" --cov-report=term-missing
 
-smoke:  ## Roda apenas os smoke tests
+smoke:  ## Roda apenas os smoke tests (os mesmos do pre-commit)
 	uv run pytest -m smoke -q --no-cov
 
 test-all:  ## Roda a suíte completa, inclusive os testes lentos
@@ -99,21 +93,7 @@ coverage:  ## Gera o relatório de cobertura em HTML
 	uv run pytest -m "not slow" --cov-report=html
 	@echo "Relatório disponível em htmlcov/index.html"
 
-hooks:  ## Instala os hooks do pre-commit e gera o baseline do detect-secrets
-	uv run pre-commit install
-	uv run pre-commit install --hook-type commit-msg
-	uv run detect-secrets scan > .secrets.baseline
-
-pre-commit:  ## Roda todos os hooks do pre-commit em todos os arquivos
-	uv run pre-commit run --all-files
-
-update-hooks:  ## Atualiza os hooks do pre-commit
-	uv run pre-commit autoupdate
-
-release:  ## Cria uma nova release (versão + changelog + tag)
-	uv run cz bump --changelog
-
-# --- Documentação ----------------------------------------------------------
+# --- Documentação e release ------------------------------------------------
 docs:  ## Constrói a documentação (modo estrito)
 	uv run mkdocs build --strict
 
@@ -123,6 +103,9 @@ docs-serve:  ## Servidor local da documentação
 docs-deploy:  ## Publica a documentação no GitHub Pages
 	uv run mkdocs gh-deploy --force
 
+release:  ## Cria uma nova release (versão + changelog + tag)
+	uv run cz bump --changelog
+
 # --- Utilitários -----------------------------------------------------------
 profile:  ## Profiling do pipeline completo com scalene
 	uv run scalene src/main.py all
@@ -130,18 +113,3 @@ profile:  ## Profiling do pipeline completo com scalene
 clean:  ## Remove caches e artefatos temporários
 	rm -rf .pytest_cache .ruff_cache htmlcov coverage.xml site
 	find . -type d -name __pycache__ -not -path "./.venv/*" -exec rm -rf {} +
-
-cache:  ## Limpa o cache do uv
-	uv cache clean
-
-jupyter:  ## Abre o JupyterLab
-	uv run jupyter lab
-
-add:  ## Adiciona uma dependência: make add PKG=nome
-	uv add $(PKG)
-
-remove:  ## Remove uma dependência: make remove PKG=nome
-	uv remove $(PKG)
-
-tree:  ## Árvore de dependências
-	uv tree
