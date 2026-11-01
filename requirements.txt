@@ -576,7 +576,7 @@ python-dateutil==3.0.0
     #   jupyter-client
     #   matplotlib
     #   pandas
-python-discovery==1.6.5
+python-discovery==1.6.7
     # via virtualenv
 python-dotenv==1.2.4
     # via
