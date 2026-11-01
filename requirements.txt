@@ -329,7 +329,7 @@ mkdocstrings-python==2.0.10 ; python_full_version >= '3.11'
     # via mkdocstrings
 msgpack==1.2.4
     # via cachecontrol
-mypy==2.4.0
+mypy==2.4.1
     # via refurb
 mypy-extensions==1.1.0
     # via
